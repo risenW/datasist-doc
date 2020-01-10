@@ -2,10 +2,10 @@
 
 * [Get Started](README.md)
 * [Installation](getting-started/README.md)
-  * [Install Pre-release Version](getting-started/install-pre-release-version.md)
-  * [Install for MacOs](getting-started/install-for-macos.md)
-  * [Install for Linux](getting-started/install-for-linux.md)
+  * [Installation on Linux](getting-started/install-for-linux.md)
   * [Install for windows](getting-started/install-for-windows.md)
+  * [Install for MacOs](getting-started/install-for-macos.md)
+  * [Install Pre-release Version](getting-started/install-pre-release-version.md)
 * [Tutorials](about/README.md)
   * [Structdata](about/structdata.md)
   * [Model](about/model.md)
