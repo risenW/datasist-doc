@@ -18,7 +18,12 @@ If you have an existing Python environment activated open your command prompt or
 #### Prerequsites
 - [Anaconda](https://www.anaconda.com/distribution/) for Python 3.7
 
+   [Click here](https://problemsolvingwithpython.com/01-Orientation/01.03-Installing-Anaconda-on-Windows/) to see a quick guide on Anancoda installation for Windows
+
+
 Open Anaconda prompt 
+
+
 
 Install datasist and other packages you need for your project
 
@@ -28,8 +33,7 @@ pip install datasist
 
 #### Test your installation:
 
-Type ```conda list``` on your Anaconda Prompt, you will see the library name and version
+Type ```conda list``` on your Anaconda Prompt to view the library name and version
 
-![Img](https://github.com/Emekaborisama/datasist-doc/blob/master/getting-started/img/Capture3.PNG)
 
 
