@@ -1,4 +1,4 @@
-# Installation on Linux
+# Installation on MacOs
 
 ### **Install in existing environment**
 
@@ -44,8 +44,8 @@ Test your installation:
 
 ```text
 $ python
-Python 3.7.5 (default, Oct 25 2019, 15:51:11) 
-[GCC 7.3.0] :: Anaconda, Inc. on linux
+Python 3.7.3 (default, Mar 27 2019, 16:54:48) 
+[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import datasist as ds
 >>> 
