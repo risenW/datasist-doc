@@ -21,4 +21,5 @@
 * [Changelog](changelog/README.md)
   * [v1.5](changelog/v1.5.md)
   * [v1.0 - v1.4](changelog/v1.0-v1.4.md)
+* [API Documentation](api-documentation.md)
 
