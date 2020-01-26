@@ -9,7 +9,7 @@ description: >-
 
 **Managing a Project**
 
-* [startproject](https://app.gitbook.com/@risingodegua/s/datasist-doc/~/drafts/-LzNg-gTABmi0cBaM4Jf/api-documentation/project/get_output)
+* startproject
 * save\_model
 * save\_data
 * save\_outputs

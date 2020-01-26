@@ -1,94 +1,97 @@
+---
+description: A detailed guide to contributing to Datasist.
+---
+
 # Contributing to datasist
 
-**Table of contents:**
+Thanks for considering contributing to Datasist!
 
-* Where to start?
-* Working with the code
-  * Version control, Git, and GitHub
-  * Getting started with Git
-  * Forking
-  * Creating a development environment
-* Docstrings Guidelines
-* Writing tests
-  * Using pytest
-  * Running the test suite
-* Contributing your changes to datasist
-  * Committing your code
-  * Pushing your changes
-  * Review your code and finally, make the pull request
+All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome here.
 
-## Where to start?
+Have something in mind and not sure, chat with us ****~~**here**~~
 
-All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
+For first time contributors, you can find/raise issues on our [GitHub “issues” page](https://github.com/risenW/datasist/issues). Once you’ve found an interesting issue, and have an improvement in mind, next thing is to set up your development environment.
 
-For first time contributors, you can find pending issues on the GitHub “issues” page. There are a number of issues listed and "good first issue" where you could start out. Once you’ve found an interesting issue, and have an improvement in mind, next thing is to set up your development environment.
-
-## Working with the code
+## **Working with the code**
 
 Now that you have an issue you want to fix, enhancement to add, or documentation to improve, you need to learn how to work with GitHub and the datasist code base.
 
 ### Version control, Git, and GitHub
 
-The datasist code is hosted on GitHub. To contribute you will need to sign up for a free GitHub account. We use Git for version control to allow many people to work together on this project.
+The datasist code is hosted on GitHub. To contribute you will need to sign up for a free GitHub account. We use Git for version control to allow many people to work together on this project. If you're new to Git and GitHub, the Official[ GitHub pages ](https://help.github.com/en/github/getting-started-with-github)is a great learning resource.
 
-Some great resources for learning Git:
+### Forking the Datasist Repository
 
-* Official [GitHub pages](http://help.github.com).
+You will need your own fork to work on the code. Go to the datasist [project page](https://github.com/risenW/datasist) and hit the Fork button. After forking the repo, copy the link, you will use this later
 
-### Getting started with Git¶
+### Create a development environment
 
-Find [Instructions](http://help.github.com/set-up-git-redirect) for installing git, setting up your SSH key, and configuring git. These steps need to be completed before you can work seamlessly between your local repository and GitHub.
+It is advisable to create a development environment to test all code changes. This helps isolate datasist settings from your other environments.
 
-### Forking the datasist repo
+You can create a new virtual environment with conda. First, make sure you have either [Anaconda](https://docs.anaconda.com/anaconda/) or [miniconda](https://docs.conda.io/en/latest/miniconda.html) installed.
 
-You will need your own fork to work on the code. Go to the datasist [project page](https://github.com/risenW/datasist) and hit the Fork button.
-
-Next, you will clone your fork to your local machine:
+Confirm you have Anaconda installed:
 
 ```text
-    git clone https://github.com/your-user-name/datasist.git
+conda --version
 ```
 
-This creates the directory datasist and connects your repository to the upstream \(main project\) repository.
+Create new virtual environment and install Python 3.5 and above:
 
-### Creating a development environment
+```
+$ conda create -n datasist-dev python=3.7 
+```
 
-To test out code changes, you’ll need to build datasist from source, which requires a Python environment.
-
-### Creating a Python environment¶
-
-Next, you'll create an isolated datasist development environment:
-
-* Install either Anaconda or miniconda
-* Make sure your conda is up to date \(conda update conda\)
-* Make sure that you have cloned the repository.
-
-Follow the steps below:
-
-1. cd to the datasit source directory
-
-`cd datasist`
-
-1. Build and install datasist
+Activate your environment:
 
 ```text
+$ source activate datasust-dev
+```
+
+Next, you will clone your forked repository to your local machine. Run the following command
+
+```text
+git clone https://github.com/your-user-name/datasist.git
+```
+
+This creates the directory **datasist** and connects your repository to the upstream \(main project\) repository.
+
+Next, change directory to datasist, build and install:
+
+```text
+    cd datasist
     python setup.py build
     pip install -e .
 ```
 
-1. Test that datasist was successfully installed
+Test that datasist was successfully installed by starting a Python REPL and import datasist
 
 ```python
-    import datasist
+$ python
+Python 3.7.5 (default, Oct 25 2019, 15:51:11) 
+[GCC 7.3.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import datasist as ds
+>>> 
 ```
 
-1. If there is no error after the previous command, then you're ready to start contibuting. Now you can fire up your favorite IDE and start implementing your changes.
+If there is no error after importing datasist, you're ready to start contributing. Now you can fire up your favorite IDE and start implementing your changes.
 
 ## Docstrings Guidelines
 
-Docstrings are an important part of coding and we encourage you to write clear and concise docstrings for your functions, methods and classes. Docstrings written for your code are automatically used to generate the datasist documentation using the **pdoc** library. Some guildlines for writing docstrings are: 1. Define what the function does. 2. Define all parameter types and what they do. 3. State the return values 4. Use the correct spacing and indentation as this affects the documentation generated by **pdoc**.
+Docstrings are an important part of coding and we encourage you to write clear and concise docstrings for your functions, methods and classes. Docstrings written for your code are automatically used to generate the datasist documentation.
 
-Sample docstrings:
+ Our guidelines for writing docstrings are:
+
+* Define what the function does. 
+* Define all parameter types and what they do.
+* State the return values.
+* Use the correct spacing and indentation as this affects the documentation generated automatically.
+* Add Example usage.
+
+Below is a sample docstrings for a function that adds two Pandas DataFrame together:
+
+
 
 ```python
     def add_df(df1=None, df2=None):
@@ -106,6 +109,14 @@ Sample docstrings:
         Returns:
         ---------
             DataFrame: Concatenation of the two dataframe
+        
+        Example:
+        ---------
+        >>> df1 = pd.DataFrame([1,2,3,4)
+        >>> df2 = pd.DataFrame(['a','b','c','d')
+        
+        >>> add_df(df1,df2)
+
         '''
 
         #check if dataframe is None
@@ -120,42 +131,40 @@ Sample docstrings:
         return final_df
 ```
 
-### Writing tests
+## Writing tests
 
-We strongly encourages contributors to write test for their code. Like many packages, datasist uses pytest.
+We strongly encourages contributors to write test for their code. Like many packages, datasist uses [**pytest**](https://docs.pytest.org/en/latest/)**.**
 
-All tests should go into the tests subdirectory and placed in the corresponding module. The tests folder contains some current examples of tests, and we suggest looking to these for inspiration.
+All tests should go into the tests sub-directory and placed in the corresponding script. The tests folder contains some current examples of tests, and we suggest looking to these for inspiration.
 
-To compare dataframe or series objects, you can use the pandas.util.testing module. The easiest way to verify that your code is correct is to explicitly construct the result you expect \(expected\), then compare it to the actual result \(output\).
+The easiest way to verify that your code is correct is to explicitly construct the result you expect \(expected\), then compare it to the actual result \(output\).
 
 ### Using pytest
 
-Here we show an example of a test case we wrote for the **drop\_redundant** function in the feature_engineering module. This test is placed in the **test\_feature\_engineering.py** file inside the \_tests_ folder.
+Here we show an example of a test case we wrote for the **drop\_redundant** function in the **feature\_engineering** module. This test is placed in the **test\_feature\_engineering.py** file inside the **tests** folder. The function is shown first below.
 
 ```python
-    ...
-
     def drop_redundant(data):
-    '''
-    Removes features with the same value in all cell. Drops feature If Nan is the second unique class as well.
-
-    Parameters:
-    -----------------------------
-        data: DataFrame or named series.
-
-    Returns:
-
-        DataFrame or named series.
-    '''
-
-    if data is None:
-        raise ValueError("data: Expecting a DataFrame/ numpy2d array, got 'None'")
-
-    #get columns
-    cols_2_drop = _nan_in_class(data)
-    print("Dropped {}".format(cols_2_drop))
-    df = data.drop(cols_2_drop, axis=1)
-    return df
+        '''
+        Removes features with the same value in all cell. Drops feature If Nan is the second unique class as well.
+    
+        Parameters:
+        -----------------------------
+            data: DataFrame or named series.
+    
+        Returns:
+    
+            DataFrame or named series.
+        '''
+    
+        if data is None:
+            raise ValueError("data: Expecting a DataFrame/ numpy2d array, got 'None'")
+    
+        #get columns
+        cols_2_drop = _nan_in_class(data)
+        print("Dropped {}".format(cols_2_drop))
+        df = data.drop(cols_2_drop, axis=1)
+        return df
 ```
 
 The corresponding test for the function above is:
@@ -179,7 +188,7 @@ def test_drop_redundant():
 
 ### Running the test case
 
-To run the test case, navigate the correct test subfolder and open a command prompt. Run the following command.
+To run the test case, navigate the **tests/** subfolder and run the following command.
 
 ```text
 pytest tests
@@ -187,7 +196,7 @@ pytest tests
 
 Learn more about pytest [here](http://docs.pytest.org/en/latest/)
 
-## Contributing your changes to pandas
+## Adding your changes to Datasist
 
 ### Committing your code
 
@@ -217,20 +226,16 @@ When you want your changes to appear publicly on your GitHub page, you can push 
 git push
 ```
 
-## Review your code and finally, make the pull request
+## Review your code and finally make the pull request
 
-If everything looks good, you are ready to make a pull request. A pull request is how code from a local repository becomes available to the GitHub community and can be reviewed and eventually merged into the master version. To submit a pull request:
+If everything looks good, you are ready to make a pull request. A pull request is how code from a local repository becomes available to the Datasist community and can be reviewed and eventually merged into the master version. To submit a pull request:
 
-1. Navigate to your repository on GitHub
-2. Click on the Pull Request button
-3. Write a description of your changes in the Preview Discussion tab
-4. Click Send Pull Request.
+* Navigate to your updated repository of datasist on GitHub
+* Click on the Pull Request button
+* Write a description of your changes in the Preview Discussion tab
+* Click Send Pull Request.
 
-This request then goes to the repository maintainers, and they will review the code and everything looks good, merge it with the master.
+This request will be reviewed by datasist maintainers and if found to be OK, will be merged into the master branch.
 
-**Hooray! Youre now a contributor to datasist. Now go bask in the euphoria!**
-
-```python
-
-```
+#### **Hooray! You're now a contributor to datasist. Now go bask in the euphoria!**
 
