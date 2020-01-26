@@ -1,2 +1,2 @@
-# Use Cases
+# Tutorials
 

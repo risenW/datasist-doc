@@ -1,4 +1,6 @@
-# Installation on MacOs
+# Installing Datasist
+
+Datasist is available as a Python package for Linux, MacOS and Windows, and can be installed like any other Python package. You can visit our [GitHub repository ](https://github.com/risenW/datasist)or get the latest version from [PyPI](https://pypi.org/project/datasist/)
 
 ### **Install in existing environment**
 
@@ -44,11 +46,18 @@ Test your installation:
 
 ```text
 $ python
-Python 3.7.3 (default, Mar 27 2019, 16:54:48) 
-[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
+Python 3.7.5 (default, Oct 25 2019, 15:51:11) 
+[GCC 7.3.0] :: Anaconda, Inc. on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import datasist as ds
 >>> 
 ```
 
+### **Upgrading Datasist**
+
+If you have installed Datasist previously, you can upgrade to the latest version with
+
+```text
+pip install --upgrade datasist
+```
 
