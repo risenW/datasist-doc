@@ -1,4 +1,4 @@
-# Overview of datasist functions \(Part 1\)
+# Quick Guide to Datasist \(1\)
 
 ## **What is Datasist, and why should you be excited about it?**
 
@@ -30,7 +30,7 @@ df = ds.drop_missing(data=data, percent=80)
 
 The goal of datasist is to abstract repetitive and mundane codes into simple, short functions and methods that can be called easily. _**Datasist was born out of sheer laziness,**_ because let's face it unless you're a 100x data scientists, we all hate typing long, boring and mundane chunks of code to do the same thing repeatedly
 
-The design of datasist is currently centered around 7 modules, namely:
+The design of datasist is currently as of **v1.5** is centered around 6 modules, namely:
 
 1. project
 2. visualization
@@ -38,13 +38,12 @@ The design of datasist is currently centered around 7 modules, namely:
 4. timeseries
 5. model
 6. structdata
-7. nlp
 
 This is subject to change in future versions as we are currently working on support for many other areas in the field. Check our **releases** or follow our social media page to stay updated.
 
 The aim of this tutorial is to introduce you to some of the important features these modules and how you can start using them in your projects. We understand you might not like taking it all at once, so we split this tutorial into two parts.
 
-Part 1 will cover the modules **project, structdata, feature engineering, timeseries** and Part 2 will cover **visualization**, **model** and **nlp**.
+Part 1 will cover the modules **project, structdata, feature engineering, timeseries** and Part 2 will cover **visualization** and **model** modules.
 
 So without wasting more time, let's get to it.
 
