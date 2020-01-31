@@ -1,25 +1,10 @@
 # startproject
 
-## Getting Super Powers
+OOPS! This page is a work in progress. We're currently working on importing our API doc from the [old version](https://risenw.github.io/datasist/index.html) to this new one.
 
-Becoming a super hero is a fairly straight forward process:
+To help us write this documentation, visit the [datasist-doc repository ](https://github.com/risenW/datasist-doc)and follow the guide there.
 
-```
-$ give me super-powers
-```
-
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
-
-Once you're strong enough, save the world:
-
-{% code title="hello.sh" %}
-```bash
-# Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-{% endcode %}
+To see the old version visit [Here](https://risenw.github.io/datasist/index.html)
 
 
 

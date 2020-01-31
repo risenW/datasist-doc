@@ -1,7 +1,3 @@
----
-description: A detailed guide to contributing to Datasist.
----
-
 # Contributing to datasist
 
 Thanks for considering contributing to Datasist!
