@@ -19,18 +19,17 @@ description: >-
 
 **Visualization**
 
-* boxplot
-* catbox
-* class\_count
-* countplot
-* histogram
-* plot\_auc
-* plot\_confusion\_matrix
-* plot\_missing
-* plot\_scatter\_shape
-* scatterplot
-* violinplot
-* autoviz
+* [boxplot](https://risingodegua.gitbook.io/datasist-doc/api-documentation/visualization/boxplot)
+* [catbox](https://risingodegua.gitbook.io/datasist-doc/api-documentation/visualization/catbox)
+* [class\_count](https://risingodegua.gitbook.io/datasist-doc/api-documentation/visualization/class_count)
+* [countplot](https://risingodegua.gitbook.io/datasist-doc/api-documentation/visualization/countplot)
+* [histogram](https://risingodegua.gitbook.io/datasist-doc/api-documentation/visualization/histogram)
+* [plot\_auc](https://risingodegua.gitbook.io/datasist-doc/api-documentation/visualization/plot_auc)
+* [plot\_confusion\_matrix](https://risingodegua.gitbook.io/datasist-doc/api-documentation/visualization/plot_confusion_matrix)
+* [plot\_missing](https://risingodegua.gitbook.io/datasist-doc/api-documentation/visualization/plot_missing)
+* [plot\_scatter\_shape](https://risingodegua.gitbook.io/datasist-doc/api-documentation/visualization/plot_scatter_shape)
+* [scatterplot](https://risingodegua.gitbook.io/datasist-doc/api-documentation/visualization/scatterplot)
+* [violinplot](https://risingodegua.gitbook.io/datasist-doc/api-documentation/visualization/violinplot)
 
 **Feature Engineering**
 
@@ -45,8 +44,8 @@ description: >-
 * fill\_missing\_num
 * fill\_missing\_cats
 * drop\_missing
-* convert\_dtype
-* bin\_age
+* [convert\_dtype](https://risingodegua.gitbook.io/datasist-doc/api-documentation/feature-engineering/convert_dtype)
+* [bin\_age](https://risingodegua.gitbook.io/datasist-doc/api-documentation/feature-engineering/bin_age)
 
 **Structured Data**
 
