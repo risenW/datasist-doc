@@ -5,7 +5,7 @@
 Saves a trained machine learning model in the models folder. Folders must be initialized using the datasist start\_project function. Creates a folder _models_ if datasist's standard directory is not available.
 
 ```python
-datasist.project.save_model(model, name='model', method='joblib')
+save_model(model, name='model', method='joblib')
 '''
     Parameters:
     --------------------

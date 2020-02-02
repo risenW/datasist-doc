@@ -5,7 +5,7 @@
 Gets an object from the outputs directory or a specified path.
 
 ```python
-datasist.project.get_output(name=None, path=None, method='jb'):
+get_output(name=None, path=None, method='jb'):
     '''
     Parameter:
     ------------------

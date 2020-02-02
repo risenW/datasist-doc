@@ -5,7 +5,7 @@
 Saves files like vocabulary, class labels, mappings, encoding, images etc. in the outputs folder.
 
 ```python
-datasist.project.save_outputs(data=None, name='proc_outputs', method='joblib')
+save_outputs(data=None, name='proc_outputs', method='joblib')
     '''
     Parameters:
     -----------------

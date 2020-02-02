@@ -11,7 +11,7 @@ The raw sub folder contains data in the raw format. This can be in the form of S
 
 
 ```python
-datasist.project.save_data(data, name='processed_data', method='joblib', loc='processed')
+save_data(data, name='processed_data', method='joblib', loc='processed')
     '''  
     Parameters:
     ------------------

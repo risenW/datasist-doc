@@ -5,7 +5,7 @@
 Gets data from the data directory or a specified path. 
 
 ```python
-datasist.project.get_data(name=None, path=None, loc='processed', method='jb'):
+get_data(name=None, path=None, loc='processed', method='jb'):
     '''
     Gets the specified data from the data directory. Directory structure must have been created using the datasist start_project function.
     

@@ -28,7 +28,7 @@ _scripts_ : Stores all code scripts usually in Python/R format. This is   usuall
 _notebooks_ : Stores all Jupyter notebooks used for experimentation.
 
 ```python
-datasist.project.start_project(project_name=None)
+project.start_project(project_name=None)
     ''' 
     Parameters:
     --------------

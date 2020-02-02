@@ -5,7 +5,7 @@
 Gets the specified model from the outputs/model directory or the specified path. 
 
 ```python
-datasist.project.get_model(name=None, path=None, method='jb'):
+get_model(name=None, path=None, method='jb'):
     '''
     Gets the specified model from the outputs/models directory. Directory structure must have been created using the datasist start_project function.
     
