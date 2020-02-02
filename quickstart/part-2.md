@@ -1,4 +1,4 @@
-# Quick Guide to Datasist \(2\)
+# Quick Guide \(2\)
 
 In the first part of this tutorial, we talked about three modules \(**structdata, feature\_engineering, timeseries**\) modules available in datasist. In this post, we'll cover the **visualization** and **model** modules. So without further ado, let's get to it.
 
