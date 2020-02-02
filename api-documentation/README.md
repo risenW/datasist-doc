@@ -9,13 +9,13 @@ description: >-
 
 **Managing a Project**
 
-* startproject
-* save\_model
-* save\_data
-* save\_outputs
-* get\_data
-* get\_model
-* get\_output
+* [startproject](https://risingodegua.gitbook.io/datasist-doc/api-documentation/project/startproject)
+* [save\_model](https://risingodegua.gitbook.io/datasist-doc/api-documentation/project/save_model)
+* [save\_data](https://risingodegua.gitbook.io/datasist-doc/api-documentation/project/save_data)
+* [save\_outputs](https://risingodegua.gitbook.io/datasist-doc/api-documentation/project/save_outputs)
+* [get\_data](https://risingodegua.gitbook.io/datasist-doc/api-documentation/project/get_data)
+* [get\_model](https://risingodegua.gitbook.io/datasist-doc/api-documentation/project/get_model)
+* [get\_output](https://risingodegua.gitbook.io/datasist-doc/api-documentation/project/get_output)
 
 **Visualization**
 

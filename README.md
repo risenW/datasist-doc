@@ -8,7 +8,9 @@ Datasist is not a drop down replacement for popular data science  libraries like
 
 Check us out on [Github](https://github.com/risenW/datasist) and give us a **star** if you like this project.
 
-To contribute to Datasist, check out our contribution guide [here](https://risingodegua.gitbook.io/datasist-doc/contributing)
+To contribute to Datasist, check out our contribution guide [here](https://risingodegua.gitbook.io/datasist-doc/contributing).
+
+To improve this documentation, check out our documentation guide [here](https://risingodegua.gitbook.io/datasist-doc/improve-our-documentation).
 
 Follow us on [Twitter](https://twitter.com/datasistlibrary) to get updates, tips and major announcements.
 
