@@ -5,7 +5,7 @@
 Gets the specified model from the outputs/model directory or the specified path. 
 
 ```python
-def get_model(name=None, path=None, method='jb'):
+datasist.project.get_model(name=None, path=None, method='jb'):
     '''
     Gets the specified model from the outputs/models directory. Directory structure must have been created using the datasist start_project function.
     
@@ -28,6 +28,7 @@ def get_model(name=None, path=None, method='jb'):
 ### Get model saved with save\_model
 
 ```python
+>>> import datasist as ds
 #save a trained model
 >>> model = RandomForestClassier()
 >>> model.fit(Xtrain, ytrain)
@@ -42,6 +43,7 @@ def get_model(name=None, path=None, method='jb'):
 ### Get a model from path
 
 ```python
+>>> import datasist as ds
 #retrieve saved model from path
 >>> retrieved_model = ds.project.get_model(path="model/rf_model.jbl")
 >>> retrived_model.predict(Xtest)

@@ -5,7 +5,7 @@
 Saves a trained machine learning model in the models folder. Folders must be initialized using the datasist start\_project function. Creates a folder _models_ if datasist's standard directory is not available.
 
 ```python
-def save_model(model, name='model', method='joblib')
+datasist.project.save_model(model, name='model', method='joblib')
 '''
     Parameters:
     --------------------
@@ -28,6 +28,7 @@ def save_model(model, name='model', method='joblib')
 ### Save Scikit-learn model
 
 ```python
+>>> import datasist as ds
 >>> model = RandomForestClassifier(n_estimators=10)
 >>> model.fit(Xtrain, Xtest)
 >>> ds.project.save_model(model, name='rf_model')
@@ -36,6 +37,7 @@ def save_model(model, name='model', method='joblib')
 ### Save Keras model
 
 ```python
+>>> import datasist as ds
 >>> model.fit(Xtrain, Xtest)
 >>> ds.project.save_model(model, name='keras_model', method='keras')
 ```

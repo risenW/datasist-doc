@@ -5,7 +5,7 @@
 Gets data from the data directory or a specified path. 
 
 ```python
-def get_data(name=None, path=None, loc='processed', method='jb'):
+datasist.project.get_data(name=None, path=None, loc='processed', method='jb'):
     '''
     Gets the specified data from the data directory. Directory structure must have been created using the datasist start_project function.
     
@@ -30,6 +30,7 @@ def get_data(name=None, path=None, loc='processed', method='jb'):
 ### Get data saved with save\_data
 
 ```python
+>>> import datasist as ds
 #save a dataset
 >>> df = pd.DataFrame({"age": range(5), "amount": range(5, 10)})
 >>> df
@@ -56,6 +57,7 @@ age  amount
 ### Get a data from path
 
 ```python
+>>> import datasist as ds
 #retrieve saved model from path
 >>> new_df = ds.project.get_data(path="data/df.csv")
 >>> new_df

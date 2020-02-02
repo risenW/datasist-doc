@@ -11,7 +11,7 @@ The raw sub folder contains data in the raw format. This can be in the form of S
 
 
 ```python
-def save_data(data, name='processed_data', method='joblib', loc='processed')
+datasist.project.save_data(data, name='processed_data', method='joblib', loc='processed')
     '''  
     Parameters:
     ------------------
@@ -40,6 +40,7 @@ def save_data(data, name='processed_data', method='joblib', loc='processed')
 For the **save\_data** to work properly, a data science directory must have been created with the datasist **startproject** function.
 
 ```python
+>>> import datasist as ds
 >>> df = pd.DataFrame({"size": range(5), "amount": range(5, 10)})
 >>> df
    size  amount

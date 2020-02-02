@@ -5,7 +5,7 @@
 Gets an object from the outputs directory or a specified path.
 
 ```python
-def get_output(name=None, path=None, method='jb'):
+datasist.project.get_output(name=None, path=None, method='jb'):
     '''
     Parameter:
     ------------------
@@ -26,6 +26,7 @@ def get_output(name=None, path=None, method='jb'):
 ### Get object saved with save\_outputs
 
 ```python
+>>> import datasist as ds
 #save a dictionary of mappings
 >>> my_mapping = {"USA" : 10, "Canada": 20, "Germany": 30, "Nigeria": 70}
 >>> ds.project.save_outputs(my_mapping, name='my_mapping')
@@ -40,6 +41,7 @@ def get_output(name=None, path=None, method='jb'):
 ### Get object from path
 
 ```python
+>>> import datasist as ds
 >>> retrieved_map = ds.project.get_output(path="output/mapping/my_mapping.jbl")
 >>> retrived_map
 {"USA" : 10, "Canada": 20, "Germany": 30, "Nigeria": 70}

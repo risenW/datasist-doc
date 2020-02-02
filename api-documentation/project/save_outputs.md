@@ -5,7 +5,7 @@
 Saves files like vocabulary, class labels, mappings, encoding, images etc. in the outputs folder.
 
 ```python
-def save_outputs(data=None, name='proc_outputs', method='joblib')
+datasist.project.save_outputs(data=None, name='proc_outputs', method='joblib')
     '''
     Parameters:
     -----------------
@@ -28,6 +28,7 @@ def save_outputs(data=None, name='proc_outputs', method='joblib')
 For the **save\_outputs** to work properly, a data science directory must have been created with the datasist **startproject** function.
 
 ```python
+>>> import datasist as ds
 >>> df = pd.DataFrame({"size": range(5), "amount": range(5, 10)})
 >>> df
    size  amount
@@ -41,6 +42,7 @@ For the **save\_outputs** to work properly, a data science directory must have b
 ```
 
 ```python
+>>> import datasist as ds
 >>> enc = joblib.dumps("my_encodings")
 >>> ds.project.save_outputs(data=enc, name='my_enc', method='joblib')
 
