@@ -40,10 +40,15 @@ $ conda create -n datasist-dev python=3.7
 
 Activate your environment:
 
+- macOS and Linux:
 ```text
-$ source activate datasust-dev
+$ source activate datasist-dev
 ```
 
+Windows:
+```text
+activate datasist-dev
+```
 Next, you will clone your forked repository to your local machine. Run the following command
 
 ```text
