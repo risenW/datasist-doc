@@ -79,8 +79,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 If there is no error after importing datasist, you're ready to start contributing. Now you can fire up your favorite IDE and start implementing your changes.
 
 However, if you will encounter a ModuleNotFound error while importing datasist package - just as captured below, you can take note of the package name, exit python interactive prompt and run pip install 'missing package' on your command line. You can thereafter proceed to import datasist after the missing package is successfully installed.
-<p align="center">
-  <img src="your_relative_path_here" width="350" title="hover text">
+<p align="left">
   <img src="https://res.cloudinary.com/ibiz-ng/image/upload/v1594476943/mnfe_qxgusk.png" width="350" alt="ModuleNotFoundError">
 </p>
 
