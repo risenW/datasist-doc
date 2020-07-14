@@ -40,10 +40,15 @@ $ conda create -n datasist-dev python=3.7
 
 Activate your environment:
 
+- macOS and Linux:
 ```text
-$ source activate datasust-dev
+$ source activate datasist-dev
 ```
 
+Windows:
+```text
+activate datasist-dev
+```
 Next, you will clone your forked repository to your local machine. Run the following command
 
 ```text
@@ -72,6 +77,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 If there is no error after importing datasist, you're ready to start contributing. Now you can fire up your favorite IDE and start implementing your changes.
+
+However, if you will encounter a ModuleNotFound error while importing datasist package - just as captured below, you can take note of the package name, exit python interactive prompt and run pip install 'missing package' on your command line. You can thereafter proceed to import datasist after the missing package is successfully installed.
+<p align="left">
+  <img src="https://res.cloudinary.com/ibiz-ng/image/upload/v1594476943/mnfe_qxgusk.png" width="350" alt="ModuleNotFoundError">
+</p>
 
 ## Docstrings Guidelines
 
