@@ -1,4 +1,4 @@
-# Quick Guide \(1\)
+# Quick Guide-Part 1
 
 ## **What is Datasist, and why should you be excited about it?**
 

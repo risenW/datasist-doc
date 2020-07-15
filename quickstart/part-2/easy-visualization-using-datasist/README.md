@@ -1,2 +1,0 @@
-# Easy visualization using datasist
-
