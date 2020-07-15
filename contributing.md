@@ -4,7 +4,7 @@ Thanks for considering contributing to Datasist!
 
 All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome here.
 
-Have something in mind and not sure, chat with us ****~~**here**~~
+Have something in mind and not sure, chat with us **\*\*~~**here\*\*~~
 
 For first time contributors, you can find/raise issues on our [GitHub “issues” page](https://github.com/risenW/datasist/issues). Once you’ve found an interesting issue, and have an improvement in mind, next thing is to set up your development environment.
 
@@ -34,21 +34,24 @@ conda --version
 
 Create new virtual environment and install Python 3.5 and above:
 
-```
-$ conda create -n datasist-dev python=3.7 
+```text
+$ conda create -n datasist-dev python=3.7
 ```
 
 Activate your environment:
 
-- macOS and Linux:
-```text
-$ source activate datasist-dev
-```
+* macOS and Linux:
+
+  ```text
+  $ source activate datasist-dev
+  ```
 
 Windows:
+
 ```text
 activate datasist-dev
 ```
+
 Next, you will clone your forked repository to your local machine. Run the following command
 
 ```text
@@ -73,21 +76,20 @@ Python 3.7.5 (default, Oct 25 2019, 15:51:11)
 [GCC 7.3.0] :: Anaconda, Inc. on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import datasist as ds
->>> 
+>>>
 ```
 
 If there is no error after importing datasist, you're ready to start contributing. Now you can fire up your favorite IDE and start implementing your changes.
 
 However, if you will encounter a ModuleNotFound error while importing datasist package - just as captured below, you can take note of the package name, exit python interactive prompt and run pip install 'missing package' on your command line. You can thereafter proceed to import datasist after the missing package is successfully installed.
-<p align="left">
-  <img src="https://res.cloudinary.com/ibiz-ng/image/upload/v1594476943/mnfe_qxgusk.png" width="350" alt="ModuleNotFoundError">
-</p>
+
+![ModuleNotFoundError](https://res.cloudinary.com/ibiz-ng/image/upload/v1594476943/mnfe_qxgusk.png)
 
 ## Docstrings Guidelines
 
 Docstrings are an important part of coding and we encourage you to write clear and concise docstrings for your functions, methods and classes. Docstrings written for your code are automatically used to generate the datasist documentation.
 
- Our guidelines for writing docstrings are:
+Our guidelines for writing docstrings are:
 
 * Define what the function does. 
 * Define all parameter types and what they do.
@@ -96,8 +98,6 @@ Docstrings are an important part of coding and we encourage you to write clear a
 * Add Example usage.
 
 Below is a sample docstrings for a function that adds two Pandas DataFrame together:
-
-
 
 ```python
     def add_df(df1=None, df2=None):
@@ -115,12 +115,12 @@ Below is a sample docstrings for a function that adds two Pandas DataFrame toget
         Returns:
         ---------
             DataFrame: Concatenation of the two dataframe
-        
+
         Example:
         ---------
         >>> df1 = pd.DataFrame([1,2,3,4)
         >>> df2 = pd.DataFrame(['a','b','c','d')
-        
+
         >>> add_df(df1,df2)
 
         '''
@@ -153,19 +153,19 @@ Here we show an example of a test case we wrote for the **drop\_redundant** func
     def drop_redundant(data):
         '''
         Removes features with the same value in all cell. Drops feature If Nan is the second unique class as well.
-    
+
         Parameters:
         -----------------------------
             data: DataFrame or named series.
-    
+
         Returns:
-    
+
             DataFrame or named series.
         '''
-    
+
         if data is None:
             raise ValueError("data: Expecting a DataFrame/ numpy2d array, got 'None'")
-    
+
         #get columns
         cols_2_drop = _nan_in_class(data)
         print("Dropped {}".format(cols_2_drop))

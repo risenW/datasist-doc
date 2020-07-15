@@ -5,7 +5,7 @@ description: >-
   Datasist, see the Datasist Tutorials.
 ---
 
-# Datasist Reference
+# API Reference
 
 **Managing a Project**
 

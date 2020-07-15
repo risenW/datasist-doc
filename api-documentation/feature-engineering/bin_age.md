@@ -1,11 +1,12 @@
 # bin\_age
 
+## bin\_age
 
-### Description 
-Categorize continous data into separate bins. this is a  way of turning continous feature into categorical feature.
+### Description
+
+Categorize continous data into separate bins. this is a way of turning continous feature into categorical feature.
 
 ```python
-
 Signature:
 ds.feature_engineering.bin_age(data,
                                 feature,
@@ -49,8 +50,7 @@ Returns:
     Returns a binned dataframe.
 ```
 
-
-# Examples
+## Examples
 
 ```python
 >>> import datasist as ds
@@ -64,35 +64,35 @@ df = pd.DataFrame(data =[list(np.random.randint(5,30,4)),
              columns = ['A','B','C','D'])
 >>> df
 
-   	A	B	C	D
-0	27	7	8	17
-1	27	25	29	21
-2	17	19	24	19
-3	28	8	21	12
-4	10	25	21	15
-5	15	12	19	9
+       A    B    C    D
+0    27    7    8    17
+1    27    25    29    21
+2    17    19    24    19
+3    28    8    21    12
+4    10    25    21    15
+5    15    12    19    9
 
 
 >>> ds.feature_engineering.bin_age(df,['A'],3,['A1','A2','A3'])
-	A	B	C	D	A_binned
-0	27	7	8	17	A3
-1	27	25	29	21	A3
-2	17	19	24	19	A2
-3	28	8	21	12	A3
-4	10	25	21	15	A1
-5	15	12	19	9	A1
-
+    A    B    C    D    A_binned
+0    27    7    8    17    A3
+1    27    25    29    21    A3
+2    17    19    24    19    A2
+3    28    8    21    12    A3
+4    10    25    21    15    A1
+5    15    12    19    9    A1
 ```
-### Setting drop_original: bool to True
+
+### Setting drop\_original: bool to True
 
 ```python
 >>> ds.feature_engineering.bin_age(df,['A'],3,['A1','A2','A3'],drop_original = True)
-B	C	D	A_binned
-0	7	8	17	A3
-1	25	29	21	A3
-2	19	24	19	A2
-3	8	21	12	A3
-4	25	21	15	A1
-5	12	19	9	A1
-
+B    C    D    A_binned
+0    7    8    17    A3
+1    25    29    21    A3
+2    19    24    19    A2
+3    8    21    12    A3
+4    25    21    15    A1
+5    12    19    9    A1
 ```
+

@@ -1,11 +1,12 @@
 # bearing
 
-### Description 
-Calculates the Bearing between two points.
-The bearing is the compass direction to travel from a starting point, and must be within the range 0 to 360. 
+## bearing
+
+### Description
+
+Calculates the Bearing between two points. The bearing is the compass direction to travel from a starting point, and must be within the range 0 to 360.
 
 ```python
-
 Signature: ds.feature_engineering.bearing(lat1, long1, lat2, long2)
 Docstring:
 Calculates the Bearing  between two points.
@@ -30,11 +31,9 @@ Parameter:
         End point longitude of the location.
 
 Returns: Series
-
 ```
 
-
-# Examples
+## Examples
 
 ```python
 >>> import datasist as ds
@@ -60,5 +59,5 @@ df = pd.DataFrame(data =[[8.6753,9.0820,9.4281,6.4281],
 1   -152.574291
 2    173.914669
 dtype: float64
-
 ```
+
