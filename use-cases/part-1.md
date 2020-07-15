@@ -79,7 +79,7 @@ train_df = pd.read_csv('train_data.csv')
 test_df = pd.read_csv('test_data.csv')
 ```
 
-### Working with the structdata module <a name="structdata"></a>
+### Working with the structdata module 
 
 The structdata module contains numerous functions for working with structured data mostly in the Pandas DataFrame format. That is, you can use the functions in this module to easily manipulate and analyze DataFrames. Let's use some of the functions available:
 
@@ -324,8 +324,7 @@ test = all_data[ntrain:]
 
 Those are some of the popular functions in the structdata module of datasist, to see other functions and to learn more about the parameters you can tweak, check the API documentation here.
 
-### Feature engineering with datasist. <a name="featEng"></a>
-
+### Feature engineering with datasist.
 Feature engineering is the process of using data’s domain knowledge to create features that make machine learning algorithms work. It’s the act of extracting important features from raw data and transforming them into formats that are suitable for machine learning.
 
 Some of the functions available in the **feature\_engineering** module of datasist can help you quickly and easily perform feature engineering. Let's explore some of them below:
@@ -588,7 +587,7 @@ df = ds.feature_engineering.log_transform(df, columns=['Building Dimension'])
 
 To work with features like latitude and longitude, datasist has dedicated functions like bearing, manhattan\_distance, get\_location\_center, etc, available in the **feature\_engineering** module. You can find more details in the API documentation here.
 
-### Working with Date time features <a name="timeSeries"></a>
+### Working with Date time features
 
 Finally in this part, we'll talk about the **timeseries** module in datasist. The timeseries module contains functions for working with date time features. It can help you extract from and visualize Date Features.
 
