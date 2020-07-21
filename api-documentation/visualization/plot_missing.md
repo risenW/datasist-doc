@@ -1,10 +1,45 @@
 # plot\_missing
 
-OOPS! This page is a work in progress. We're currently working on importing our API doc from the [old version](https://risenw.github.io/datasist/index.html) to this new one.
+## Description
 
-To help us write this documentation, visit the [datasist-doc repository ](https://github.com/risenW/datasist-doc)and follow the guide there.
+Plots the data as a heatmap to show missing values.
 
-To see the old version visit [Here](https://risenw.github.io/datasist/index.html)
+
+
+```python
+plot_missing(data=None):
+   '''
+    Parameters
+    ------------
+        data: DataFrame, array, or list of arrays.
+            The data to plot.
+ '''
+```
+
+## Examples
+
+We are using the titanic data set and a Jupyter notebook in the following examples. 
+
+plot_missing is created for every column in a DataFrame:
+
+```python
+import pandas as pd
+import datasist.visualizations as vs
+
+df = pd.read_csv('titanic.csv')
+vs.plot_missing(data=df)
+```
+
+![Image](https://i.imgur.com/30O2DoC.png)
+
+
+
+
+
+
+ 
+
+
 
 
 
