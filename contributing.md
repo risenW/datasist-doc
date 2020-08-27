@@ -14,15 +14,16 @@ Now that you have an issue you want to fix, enhancement to add, or documentation
 
 ### Version control, Git, and GitHub
 
-The datasist code is hosted on GitHub. To contribute you will need to sign up for a free GitHub account. We use Git for version control to allow many people to work together on this project. If you're new to Git and GitHub, the Official[ GitHub pages ](https://help.github.com/en/github/getting-started-with-github)is a great learning resource.
+The datasist code is hosted on GitHub. To contribute you will need to sign up for a [free GitHub account](https://github.com/join). 
+We use Git for version control to coordinate collaboration of contributors to this project. If you're new to Git and GitHub, the Official[ GitHub page](https://help.github.com/en/github/getting-started-with-github) is a great learning resource.
 
 ### Forking the Datasist Repository
 
-You will need your own fork to work on the code. Go to the datasist [project page](https://github.com/risenW/datasist) and hit the Fork button. After forking the repo, copy the link, you will use this later
+You will need your own fork to work on the code. Go to the datasist [project page](https://github.com/risenW/datasist) and hit the Fork button. After forking the repo,Click on the code drop-down and copy the link, you will use this later.
 
 ### Create a development environment
 
-It is advisable to create a development environment to test all code changes. This helps isolate datasist settings from your other environments.
+It is advisable to create a development environment to test all code changes. This helps isolate datasist settings from other environments on your computer.
 
 You can create a new virtual environment with conda. First, make sure you have either [Anaconda](https://docs.anaconda.com/anaconda/) or [miniconda](https://docs.conda.io/en/latest/miniconda.html) installed.
 
@@ -32,7 +33,7 @@ Confirm you have Anaconda installed:
 conda --version
 ```
 
-Create new virtual environment and install Python 3.5 and above:
+Create new virtual environment and install Python 3.5 or a later version:
 
 ```text
 $ conda create -n datasist-dev python=3.7
@@ -46,48 +47,64 @@ Activate your environment:
   $ source activate datasist-dev
   ```
 
-Windows:
+* Windows:
 
 ```text
 activate datasist-dev
-```
+``` 
 
-Next, you will clone your forked repository to your local machine. Run the following command
-
+Next, you will clone your forked repository to your local machine. Enter the following command:
+```text
+git clone
+``` 
+then paste the url you copied earlier, next to the git clone command as shown below and press Enter
 ```text
 git clone https://github.com/your-user-name/datasist.git
 ```
 
 This creates the directory **datasist** and connects your repository to the upstream \(main project\) repository.
 
-Next, change directory to datasist, build and install:
+Next, change directory to datasist:
 
 ```text
     cd datasist
+```
+build:
+```text
     python setup.py build
+```
+and install:
+```text
     pip install -e .
 ```
 
-Test that datasist was successfully installed by starting a Python REPL and import datasist
+Test that **datasist** was successfully installed by starting a Python REPL:
 
 ```python
 $ python
 Python 3.7.5 (default, Oct 25 2019, 15:51:11) 
 [GCC 7.3.0] :: Anaconda, Inc. on linux
 Type "help", "copyright", "credits" or "license" for more information.
+```
+then import datasist:
+```
 >>> import datasist as ds
 >>>
 ```
 
-If there is no error after importing datasist, you're ready to start contributing. Now you can fire up your favorite IDE and start implementing your changes.
+If there you encounter no error after importing datasist, you're ready to start contributing. Now you can launch up your favorite IDE and start implementing your changes.
 
-However, if you will encounter a ModuleNotFound error while importing datasist package - just as captured below, you can take note of the package name, exit python interactive prompt and run pip install 'missing package' on your command line. You can thereafter proceed to import datasist after the missing package is successfully installed.
+However, if you encounter a ModuleNotFound error while importing datasist package - as captured below, take note of the **missing package name**, exit the python interactive prompt and run on your command line.
+```text
+pip install 'missing package name'
+```
+Proceed to import datasist after the missing package is successfully installed.
 
 ![ModuleNotFoundError](https://res.cloudinary.com/ibiz-ng/image/upload/v1594476943/mnfe_qxgusk.png)
 
 ## Docstrings Guidelines
 
-Docstrings are an important part of coding and we encourage you to write clear and concise docstrings for your functions, methods and classes. Docstrings written for your code are automatically used to generate the datasist documentation.
+Docstrings are important parts of coding and we encourage you to write clear and concise docstrings for your functions, methods and classes. Docstrings written for your code are automatically used to generate the datasist documentation.
 
 Our guidelines for writing docstrings are:
 
@@ -139,15 +156,15 @@ Below is a sample docstrings for a function that adds two Pandas DataFrame toget
 
 ## Writing tests
 
-We strongly encourages contributors to write test for their code. Like many packages, datasist uses [**pytest**](https://docs.pytest.org/en/latest/)**.**
+We strongly encourages contributors to write test for their code. Like many other python packages, datasist uses [**pytest**](https://docs.pytest.org/en/latest/) to test its' code.
 
-All tests should go into the tests sub-directory and placed in the corresponding script. The tests folder contains some current examples of tests, and we suggest looking to these for inspiration.
+All tests should go into the tests sub-directory and placed in the corresponding script. The tests folder contains some current examples of tests, and we suggest looking through these for inspiration.
 
 The easiest way to verify that your code is correct is to explicitly construct the result you expect \(expected\), then compare it to the actual result \(output\).
 
 ### Using pytest
 
-Here we show an example of a test case we wrote for the **drop\_redundant** function in the **feature\_engineering** module. This test is placed in the **test\_feature\_engineering.py** file inside the **tests** folder. The function is shown first below.
+Here, we show an example of a test case written for the **drop\_redundant** function in the **feature\_engineering** module. This test is placed in the **test\_feature\_engineering.py** file inside the **tests** folder. The function is shown first below;
 
 ```python
     def drop_redundant(data):
@@ -200,25 +217,24 @@ To run the test case, navigate the **tests/** subfolder and run the following co
 pytest tests
 ```
 
-Learn more about pytest [here](http://docs.pytest.org/en/latest/)
+Learn more about pytest [here](http://docs.pytest.org/en/latest/).
 
-## Adding your changes to Datasist
 
-### Committing your code
+## Adding your changes to Datasist and Committing your code
 
-Once you’ve made changes, you can see them by typing:
+Once you’ve made and saved your changes, you can check the changes by entering the underlisted command in our terminal:
 
 ```text
 git status
 ```
 
-Next, you can track your changes using
+Next, Add the changes you've made by entering:
 
 ```text
 git add .
 ```
 
-Next, you commit changes using:
+Next, commit your changes using:
 
 ```text
 git commit -m "Enter any commit message here"
@@ -226,7 +242,7 @@ git commit -m "Enter any commit message here"
 
 ### Pushing your changes
 
-When you want your changes to appear publicly on your GitHub page, you can push to your forked repo with:
+Now, you want your changes to appear publicly on your GitHub page, you can push to your forked repo with:
 
 ```text
 git push
@@ -241,7 +257,7 @@ If everything looks good, you are ready to make a pull request. A pull request i
 * Write a description of your changes in the Preview Discussion tab
 * Click Send Pull Request.
 
-This request will be reviewed by datasist maintainers and if found to be OK, will be merged into the master branch.
+This request will be reviewed by datasist maintainers and where it meets the requirements,it will be merged into the master branch.
 
 #### **Hooray! You're now a contributor to datasist. Now go bask in the euphoria!**
 
