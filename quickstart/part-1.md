@@ -676,7 +676,7 @@ ds.feature_engineering.get_qcut(data = dfs, col = 'Age', q = [0, .25, .5, .75, 1
 Name: Age, dtype: float64
 	
 |  |   |
-| :--- | :--- | :--- | :--- |
+| :--- | :--- | 
 | 0 | 19.250  |
 | 1 | 20.500 |
 | 2 | 14.999 |
