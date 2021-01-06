@@ -298,7 +298,7 @@ ds.structdata.get_unique_counts(train_df)
 | 5 | NumberOfWindows | 11 |
 | 6 | Geo\_Code | 1308 |
 
-**6. get\_data\_cols:** This function is used to returns a list of all date-like features in a dataframe that have a date format like _02-01-2021_ .
+**6. get\_data\_cols:** This function is used to returns a set of all date-like features in a dataframe that have a date format like _02-01-2021_ .
 
 ```python
 
@@ -314,12 +314,7 @@ ds.strutdata.get_date_cols(dfs)
 
 **Output:**
 	
-|  | Name  | Age | Sex | Date Resumed | Pension Date |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 0 | tom | 20 | Male | 10-11-19 | 01-02-2010 |
-| 1 | nick | 21 | Male | 03-04-02 | 06-09-2020 |
-| 2 | jack | 19 | Female | 09-04-15 | 09-04-2015 |
-| 3 | remi | 22 | Female |  11-11-19 | 10-02-2019 |
+{'Date Resumed', 'Pension Date'}
 
 
 
