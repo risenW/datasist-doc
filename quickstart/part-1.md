@@ -354,7 +354,7 @@ Some of the functions available in the **feature\_engineering** module of datasi
 Functions in the **feature\_engineering** module always returns a new and transformed DataFrame. This means, it always expects that you assign the result to a variable as nothing happens inplace.
 {% endhint %}
 
-1. **drop\_missing:** This function drops columns/features with a specified percentage of missing values.  Let's demonstrate this below:
+**1. drop\_missing:** This function drops columns/features with a specified percentage of missing values.  Let's demonstrate this below:
 
 ```text
 #first let's view the percentage of missing values in the dataset
