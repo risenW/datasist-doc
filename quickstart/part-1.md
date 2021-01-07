@@ -298,7 +298,27 @@ ds.structdata.get_unique_counts(train_df)
 | 5 | NumberOfWindows | 11 |
 | 6 | Geo\_Code | 1308 |
 
-**6. join\_train\_and\_test:** When prototyping, you may want to concatenate both train and test set, and then apply some transformations. You can use the _**join\_train\_and\_test**_ function for that. It returns a concatenated dataset, the size of the train and test data for splitting in the future
+**6. get\_data\_cols:** This function is used to returns a set of all date-like features in a dataframe that have a date format like _02-01-2021_ .
+
+```python
+
+data = {'Name':['tom', 'nick', 'jack','remi'],
+        'Age':['20', '21', '19','22'], 
+	'Date Resumed': ['10-11-19', '03-04-02', '09-04-15', '11-11-19'],
+	'Pension Date': ['01-02-2010', '06-09-2020', '09-04-2015', '10-02-2019']
+        'Sex': ['Male','Male','Female', 'Female']}
+
+dfs = pd.DataFrame(data)
+ds.strutdata.get_date_cols(dfs)
+```
+
+**Output:**
+	
+{'Date Resumed', 'Pension Date'}
+
+
+
+**7. join\_train\_and\_test:** When prototyping, you may want to concatenate both train and test set, and then apply some transformations. You can use the _**join\_train\_and\_test**_ function for that. It returns a concatenated dataset, the size of the train and test data for splitting in the future
 
 **Output:**
 
