@@ -726,7 +726,7 @@ data = {'Name':['tom', 'nick', 'jack','remi'],
         }
 
 dfs = pd.DataFrame(data)
-dfs
+ds.feature_engineering.to_date(dfs)
 ```
 
 **Output:**
