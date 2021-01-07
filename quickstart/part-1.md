@@ -83,7 +83,7 @@ test_df = pd.read_csv('test_data.csv')
 
 The structdata module contains numerous functions for working with structured data mostly in the Pandas DataFrame format. That is, you can use the functions in this module to easily manipulate and analyze DataFrames. Let's use some of the functions available:
 
-1. **describe**: We all know the describe function in Pandas, well ,we decided to extend it to support full description of a dataset at a glance. 
+**1. describe**: We all know the describe function in Pandas, well ,we decided to extend it to support full description of a dataset at a glance. 
 
 ```python
 ds.structdata.describe(train_df)
