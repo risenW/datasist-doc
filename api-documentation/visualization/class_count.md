@@ -4,8 +4,6 @@
 
 Displays the number of classes in a categorical feature.
 
-
-
 ```python
 class_count(data=None, 
             features=None, 
@@ -35,9 +33,9 @@ class_count(data=None,
 
 ## Examples
 
-We are using the titanic data set and a Jupyter notebook in the following examples. 
+We are using the titanic data set and a Jupyter notebook in the following examples.
 
-class_count can be created for every categorical column in a DataFrame:
+class\_count can be created for every categorical column in a DataFrame:
 
 ```python
 import pandas as pd
@@ -48,11 +46,4 @@ vs.class_count(data=df)
 ```
 
 ![Image](https://i.imgur.com/8ALOgLP.png)
-
-
-
-
-
-
-
 

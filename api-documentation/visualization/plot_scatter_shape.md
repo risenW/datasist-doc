@@ -2,9 +2,7 @@
 
 ## Description
 
-Makes a scatter plot of data using shape_col as seperation.
-
-
+Makes a scatter plot of data using shape\_col as seperation.
 
 ```python
 plot_scatter_shape(data=None, 
@@ -30,9 +28,9 @@ plot_scatter_shape(data=None,
 
 ## Examples
 
-We are using the classic iris data set and a Jupyter notebook in the following examples. 
+We are using the classic iris data set and a Jupyter notebook in the following examples.
 
-plot_scatter_shape can be created for every column in a DataFrame:
+plot\_scatter\_shape can be created for every column in a DataFrame:
 
 ```python
 import pandas as pd
@@ -41,17 +39,14 @@ import datasist.visualizations as vs
 df = pd.read_csv('iris.csv')
 vs.plot_scatter_shape(data = df, cols = ['sepal_length','sepal_width','petal_length','petal_width'], shape_col = 'species', col_y = 'sepal_length', alpha = 0.2)
 ```
-![Image](https://i.imgur.com/mv3VEyV.png)
-![Image](https://i.imgur.com/S9SGneY.png)
-![Image](https://i.imgur.com/LHW4CRU.png)
-![Image](https://i.imgur.com/7i9Iogf.png)
 
+![Image](https://i.imgur.com/mv3VEyV.png) ![Image](https://i.imgur.com/S9SGneY.png) ![Image](https://i.imgur.com/LHW4CRU.png) ![Image](https://i.imgur.com/7i9Iogf.png)
 
-
- plot_scatter_shape can be created for specified columns only:
+plot\_scatter\_shape can be created for specified columns only:
 
 ```python
 vs.plot_scatter_shape(data = df, cols = ['sepal_width'], shape_col = 'species', col_y = 'sepal_length')
 ```
 
 ![Image](https://i.imgur.com/sQyaJMx.png)
+

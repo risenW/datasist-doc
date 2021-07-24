@@ -14,8 +14,7 @@ Now that you have an issue you want to fix, enhancement to add, or documentation
 
 ### Version control, Git, and GitHub
 
-The datasist code is hosted on GitHub. To contribute you will need to sign up for a [free GitHub account](https://github.com/join). 
-We use Git for version control to coordinate collaboration of contributors to this project. If you're new to Git and GitHub, the Official[ GitHub page](https://help.github.com/en/github/getting-started-with-github) is a great learning resource.
+The datasist code is hosted on GitHub. To contribute you will need to sign up for a [free GitHub account](https://github.com/join). We use Git for version control to coordinate collaboration of contributors to this project. If you're new to Git and GitHub, the Official[ GitHub page](https://help.github.com/en/github/getting-started-with-github) is a great learning resource.
 
 ### Forking the Datasist Repository
 
@@ -41,23 +40,18 @@ $ conda create -n datasist-dev python=3.7
 
 Activate your environment:
 
-* macOS and Linux:
-
-  ```text
-  $ source activate datasist-dev
-  ```
-
-* Windows:
-
 ```text
-activate datasist-dev
-``` 
+$ conda activate datasist-dev
+```
 
 Next, you will clone your forked repository to your local machine. Enter the following command:
+
 ```text
 git clone
-``` 
+```
+
 then paste the url you copied earlier, next to the git clone command as shown below and press Enter
+
 ```text
 git clone https://github.com/your-user-name/datasist.git
 ```
@@ -69,11 +63,15 @@ Next, change directory to datasist:
 ```text
     cd datasist
 ```
+
 build:
+
 ```text
     python setup.py build
 ```
+
 and install:
+
 ```text
     pip install -e .
 ```
@@ -86,8 +84,10 @@ Python 3.7.5 (default, Oct 25 2019, 15:51:11)
 [GCC 7.3.0] :: Anaconda, Inc. on linux
 Type "help", "copyright", "credits" or "license" for more information.
 ```
+
 then import datasist:
-```
+
+```text
 >>> import datasist as ds
 >>>
 ```
@@ -95,9 +95,11 @@ then import datasist:
 If there you encounter no error after importing datasist, you're ready to start contributing. Now you can launch up your favorite IDE and start implementing your changes.
 
 However, if you encounter a ModuleNotFound error while importing datasist package - as captured below, take note of the **missing package name**, exit the python interactive prompt and run on your command line.
+
 ```text
 pip install 'missing package name'
 ```
+
 Proceed to import datasist after the missing package is successfully installed.
 
 ![ModuleNotFoundError](https://res.cloudinary.com/ibiz-ng/image/upload/v1594476943/mnfe_qxgusk.png)
@@ -218,7 +220,6 @@ pytest tests
 ```
 
 Learn more about pytest [here](http://docs.pytest.org/en/latest/).
-
 
 ## Adding your changes to Datasist and Committing your code
 

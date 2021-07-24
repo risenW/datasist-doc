@@ -4,8 +4,6 @@
 
 Plots the data as a heatmap to show missing values.
 
-
-
 ```python
 plot_missing(data=None):
    '''
@@ -18,9 +16,9 @@ plot_missing(data=None):
 
 ## Examples
 
-We are using the titanic data set and a Jupyter notebook in the following examples. 
+We are using the titanic data set and a Jupyter notebook in the following examples.
 
-plot_missing is created for every column in a DataFrame:
+plot\_missing is created for every column in a DataFrame:
 
 ```python
 import pandas as pd
@@ -31,15 +29,4 @@ vs.plot_missing(data=df)
 ```
 
 ![Image](https://i.imgur.com/30O2DoC.png)
-
-
-
-
-
-
- 
-
-
-
-
 

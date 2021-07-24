@@ -4,8 +4,6 @@
 
 Makes a side by side bar plot of all categorical features against a categorical target feature.
 
-
-
 ```python
 catbox(data=None, 
         cat_features=None, 
@@ -40,7 +38,7 @@ catbox(data=None,
 
 ## Examples
 
-We are using the titanic data set and a Jupyter notebook in the following examples. 
+We are using the titanic data set and a Jupyter notebook in the following examples.
 
 catbox can be created for every categorical column in a DataFrame:
 
@@ -52,17 +50,13 @@ df = pd.read_csv('titanic.csv')
 vs.catbox(data=df, target='survived')
 ```
 
-![Image](https://i.imgur.com/2zUgHbv.png)
-![Image](https://i.imgur.com/qttwIQt.png)
-![Image](https://i.imgur.com/Hfjcvaf.png)
+![Image](https://i.imgur.com/2zUgHbv.png) ![Image](https://i.imgur.com/qttwIQt.png) ![Image](https://i.imgur.com/Hfjcvaf.png)
 
- catbox can be created for specified categorical column only:
+catbox can be created for specified categorical column only:
 
 ```python
 vs.catbox(data=df2, cat_features=['who'], target='survived', fig_size=(15,10))
 ```
+
 ![Image](https://i.imgur.com/VTMbscP.png)
-
-
-
 

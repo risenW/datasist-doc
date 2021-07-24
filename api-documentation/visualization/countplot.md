@@ -4,8 +4,6 @@
 
 Makes a bar plot of all categorical features to show their counts.
 
-
-
 ```python
 countplot(data=None, 
           features=None, 
@@ -42,7 +40,7 @@ countplot(data=None,
 
 ## Examples
 
-We are using the titanic data set and a Jupyter notebook in the following examples. 
+We are using the titanic data set and a Jupyter notebook in the following examples.
 
 Countplot can be created for every categorical column in a DataFrame:
 
@@ -53,17 +51,6 @@ import datasist.visualizations as vs
 df = pd.read_csv('titanic.csv')
 vs.countplot(data=df)
 ```
-![Image](https://i.imgur.com/ksdlZUY.png)
-![Image](https://i.imgur.com/rObX8w8.png)
-![Image](https://i.imgur.com/iQ0tKd0.png)
-![Image](https://i.imgur.com/YZxzPK6.png)
-![Image](https://i.imgur.com/4c2YqfR.png)
 
-
-
-
-
-
-
-
+![Image](https://i.imgur.com/ksdlZUY.png) ![Image](https://i.imgur.com/rObX8w8.png) ![Image](https://i.imgur.com/iQ0tKd0.png) ![Image](https://i.imgur.com/YZxzPK6.png) ![Image](https://i.imgur.com/4c2YqfR.png)
 
