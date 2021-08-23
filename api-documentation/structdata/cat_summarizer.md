@@ -41,6 +41,6 @@ import pandas as pd
 import datasist as ds
 
 df = pd.read_csv('titanic.csv')
-ds.structdata.cat_summarizer(df, 'Sex',  hue='Survived', palette='Set1', verbose=True)
+ds.structdata.cat_summarizer(df, x='Sex',  hue='Survived', palette='Set1', verbose=True)
 ```
 ![Image](https://i.imgur.com/zL1IeEj.png) !
