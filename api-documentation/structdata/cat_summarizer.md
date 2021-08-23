@@ -1,10 +1,46 @@
 # cat\_summarizer
 
-OOPS! This page is a work in progress. We're currently working on importing our API doc from the [old version](https://risenw.github.io/datasist/index.html) to this new one.
+## Description
 
-To help us write this documentation, visit the [datasist-doc repository ](https://github.com/risenW/datasist-doc)and follow the guide there.
+Helper function that gives a quick summary of a given column of categorical data
 
-To see the old version visit [Here](https://risenw.github.io/datasist/index.html)
+```python
+cat_summarizer(data, x=None, y=None, hue=None, palette='Set1', verbose=True)
+    '''
+    Helper function that gives a quick summary of a given column of categorical data
 
+    Parameters:
+    ---------------------------
+        dataframe: pandas dataframe
 
+        x: str.
+            horizontal axis to plot the labels of categorical data, y would be the count.
 
+        y: str. 
+            vertical axis to plot the labels of categorical data, x would be the count.
+
+        hue: str. i
+            if you want to compare it another variable (usually the target variable)
+
+        palette: array, list.
+
+            Colour of the plot
+
+    Returns:
+    ----------------------
+        Quick Stats of the data and also the count plot
+    '''    
+   
+```
+## Examples
+
+We are using the titanic data set and a Jupyter notebook in the following examples. 
+
+```python
+import pandas as pd
+import datasist as ds
+
+df = pd.read_csv('titanic.csv')
+ds.structdata.cat_summarizer(df, 'Sex',  hue='Survived', palette='Set1', verbose=True)
+```
+![Image](https://i.imgur.com/zL1IeEj.png) !
